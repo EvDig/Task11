@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <h1 align="center">Все книги</h1>
+    <br>
+    {% for book in books %}
+        {% include "includes/book_card.html" %}
+    {% endfor %}
+{% endblock %}

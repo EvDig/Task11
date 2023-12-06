@@ -1,0 +1,24 @@
+[
+{
+  "model": "library.book",
+  "pk": 1,
+  "fields": {
+    "name": "Война и мир",
+    "author": "Толстой вроде",
+    "publisher": "Кто угодно",
+    "year": 1984,
+    "price": "1000.00"
+  }
+},
+{
+  "model": "library.book",
+  "pk": 2,
+  "fields": {
+    "name": "Преступление и наказание",
+    "author": "Не помню",
+    "publisher": "Да",
+    "year": 2001,
+    "price": "900.00"
+  }
+}
+]
