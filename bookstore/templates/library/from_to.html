@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load static %}
+    {% include "includes/messages.html" %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <h1 align="center">Вывести книги с минимальной и максимальной ценой</h1>
+    <br>
+    {% include "includes/form.html" %}
+{% endblock %}

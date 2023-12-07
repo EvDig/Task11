@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load static %}
+    {% include "includes/messages.html" %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <h1 align="center">Загрузить строки из файла</h1>
+    <br>
+    <form enctype="multipart/form-data" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <ul>
+          {{ form.as_ul }}
+        </ul>
+
+        <input type="submit" value="Отправить">
+    </form>
+{% endblock %}

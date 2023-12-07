@@ -22,3 +22,25 @@ class BookForm(django.forms.ModelForm):
             "year": "Год издания",
             "price": "Цена",
         }
+
+
+class FromToForm(django.forms.Form):
+    min_price = django.forms.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        min_value=0,
+        label="Минимальная цена",
+    )
+    max_price = django.forms.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        min_value=0,
+        label="Максимальная цена",
+    )
+
+
+class FileUploadForm(django.forms.Form):
+    file = django.forms.FileField(
+        label="Файл",
+        required=True,
+    )

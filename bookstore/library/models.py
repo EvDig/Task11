@@ -1,9 +1,14 @@
+import django.core.validators
 import django.db.models
+
+import library.managers
 
 __all__ = []
 
 
 class Book(django.db.models.Model):
+    objects = library.managers.BookManager()
+
     name = django.db.models.CharField(
         verbose_name="название",
         max_length=33,
@@ -23,6 +28,7 @@ class Book(django.db.models.Model):
         max_digits=6,
         decimal_places=2,
         verbose_name="цена",
+        validators=[django.core.validators.MinValueValidator(0)],
     )
 
     class Meta:
